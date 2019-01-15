@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Yêu Sách Bookstore</title>
+	<link rel="icon" type="image/png" href="image/LOGO.ico" />
+
+	<link rel="stylesheet" type="text/css" href="lib/css/stylesheet.css" data-minify="1" />
+	<link rel="stylesheet" type="text/css" href="lib/css/style.css">
+	<link rel="stylesheet" type="text/css" href="lib/css/styleHome.css">
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<script type="text/javascript" src="lib/js/jquery-3.3.1.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+
+<body class="common-home">
+
+	<!-- Phần header cho trang Web -->
+	<header>
+		<!-- Thanh topbar -->
+		<div class="container-fluid">
+
+			<!-- Thanh tiêu để trên cùng dành cho màn hình trung bình và hẹp -->
+			<div class="topbar">
+				<div class="container">
+					<div class="row">
+						<div class="col-ms-1">
+							<a href="Home"><img alt="logo" src="image/logo.jpg" style="width: 55px; margin-left: -20px;"></img></a>
+						</div>
+						<div class="col-ms-7" style="margin-top: 10px;">
+							<span style="float: left; color:#333; font-weight: bold;">
+								Liên hệ:
+							</span>
+							<span id="sdt" style="float: left; font-weight: bolder;
+									font-family: Arial, Helvetica, sans-serif; 
+									text-shadow: 0 0 5px yellow;
+									margin-left: 10px">
+								<a href="tel:0613951322" style="color: red;">0613 951 322</a>
+								<span style="margin: 0 5px; color: red;">-</span>
+								<a href="tel:0979032277" style="color: red;">0979 03 22 77</a>
+							</span>
+						</div>
+						<div class="col-ms-3">
+							<div class="icon-bar horizontal">
+								<ul>
+									<li>
+										<div class="i-right dropdown">
+											<i class="fa fa-user" style="color:#333"></i>
+											<div class="right-dropdown-content">
+												<ul>
+													<li><a href="login">Đăng nhập</a>
+													<li><a class="signup-window" href="#signup-box">Đăng ký tài khoản</a>
+												</ul>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="top-cart cart-icon">
+											<a href="ViewCart"><i class="fa fa-briefcase" style="color: #333"></i></a>
+											<div class="cart-count">
+												<span id="number">0</span>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Thanh menu -->
+			<nav style="
+						background: -moz-linear-gradient(top, #004d92 0%,#005db1 100%);
+						background: -webkit-linear-gradient(top, #004d92 0%, #005db1 100%);
+						background: linear-gradient(to bottom, #004d92 0%,#005db1 100%);
+						filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#004d92', endColorstr='#005db1',GradientType=0);
+						">
+				<div class="container">
+					<!-- Menu -->
+					<div class="row">
+						<div class="col-lg-12 col-md-12 col-sm-12 col-ms-12">
+							<div class="navbar" style="border: none;">
+								<ul class="nav nav-left">
+									<li class="nav-item nav-item-lv1 active"><a class="nav-link" href="Home">Trang chủ</a></li>
+									<li class="nav-item nav-item-lv1"><a class="nav-link" href="Categories?danhMuc=yeuthich">Sản phẩm</a></li>
+									<li class="nav-item nav-item-lv1"><a class="nav-link" href="Categories?danhMuc=banchay">Về chúng tôi</a></li>
+								</ul>
+								<div class="nav nav-toggle">
+									<button id="btn-toggle">
+										<i class="fa fa-align-justify"></i>
+									</button>
+									<div class="toggle-content">
+										<span class="toggle-item" style="cursor: pointer;" onclick="gotoPage('Home')"><a href="Home">Trang chủ</a></span>
+										<span class="toggle-item" style="cursor: pointer;" onclick="gotoPage('Categories?danhMuc=yeuthich')"><a href="Categories?danhMuc=yeuthich">Sản phẩm</a></span>
+										<span class="toggle-item" style="cursor: pointer;" onclick="gotoPage('Categories?danhMuc=banchay')"><a href="Categories?danhMuc=banchay">Về chúng tôi</a></span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</nav>
+	</header>
+
+	<div class="container-fluid" id="content">
+		<section>
+			<div clas="container" style="margin: 1.0em 0em;">
+				<div class="row khung">
+					<div class="col-xs-12" style="padding: 0">
+						<div id="my-carousel" class="carousel slide" data-ride="carousel">
+							<ol class="carousel-indicators">
+								<li data-target="#my-carousel" data-slide-to="0" class="active"></li>
+								<li data-target="#my-carousel" data-slide-to="1" class=""></li>
+							</ol>
+							<div class="carousel-inner">
+								<div class="item active"><a onclick="openNewTab('UserCT-BanTin?id=1')"> <img src="image/banner/banner-01.jpeg" style="width: 100%; background-repeat: no-repeat; cursor:pointer;">
+									</a></div>
+								<div class="item"><a onclick="openNewTab('UserCT-BanTin?id=1')"> <img src="image/banner/banner-02.jpeg" style="width: 100%; background-repeat: no-repeat; cursor:pointer;"></a></div>
+
+								<a class="left carousel-control" href="#my-carousel" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left"></span></a>
+								<a class="right carousel-control" href="#my-carousel" data-slide="next"> <span class="glyphicon glyphicon-chevron-right"></span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<article class="container">
+			<div class="categories" style="margin: 1em 1em 1em 0em;">
+				<div class="row descrip">
+					<div class="col-xs-12"	>
+						<div class="title">Sản phẩm</div>
+					</div>
+				</div>
+				<ul class="row content listView">
+					<li class="col-md-3 col-xs-6 listView-item">
+						<div class="thumbnail" onclick="gotoPage('Filter?cate=type00001')">
+							<img src="image/sanpham/binhga/binh-01.jpg"></img>
+							<div class="detail">Kinh Nghiệm Sống</div>
+						</div>
+					</li>
+					<li class="col-md-3 col-xs-6 listView-item">
+						<div class="thumbnail" onclick="gotoPage('Filter?cate=type00002')">
+							<img src="image/sanpham/binhga/binh-02.jpg"></img>
+							<div class="detail">Sách Văn Học</div>
+						</div>
+					</li>
+					<li class="col-md-3 col-xs-6 listView-item">
+						<div class="thumbnail" onclick="gotoPage('Filter?cate=type00004')">
+							<img src="image/sanpham/binhga/binh-03.jpg"></img>
+							<div class="detail">Sách Kinh Tế</div>
+						</div>
+					</li>
+					<li class="col-md-3 col-xs-6 listView-item">
+						<div class="thumbnail" onclick="gotoPage('Filter?cate=type00005')">
+							<img src="image/sanpham/binhga/binh-04.jpg"></img>
+							<div class="detail">Tiểu Thuyết</div>
+						</div>
+					</li>
+					<li class="col-md-3 col-xs-6 listView-item">
+						<div class="thumbnail" onclick="gotoPage('Filter?cate=type00007')">
+							<img src="image/sanpham/binhga/binh-05.jpg"></img>
+							<div class="detail">Trinh Thám</div>
+						</div>
+					</li>
+					<li class="col-md-3 col-xs-6 listView-item">
+						<div class="thumbnail" onclick="gotoPage('Filter?cate=type00009')">
+							<img src="image/sanpham/binhga/binh-06.jpg"></img>
+							<div class="detail">Văn học nước ngoài</div>
+						</div>
+					</li>
+					<li class="col-md-3 col-xs-6 listView-item">
+						<div class="thumbnail" onclick="gotoPage('Filter?cate=type00010')">
+							<img src="image/sanpham/binhga/binh-07.jpg"></img>
+							<div class="detail">Truyện tranh</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</article>
+	</div>
+
+	<!-- Phần footer cho trang Web -->
+		<footer class="footer">
+			<div class="content">
+				<div class="site-footer">
+					<div class="copyright clearfix">
+						<div class="container">
+							<div class="inner clearfix">
+								<div class="row">
+									<div class="col-md-12 text-center text-lg-left">
+										<div class="col-md-12 text-center text-lg-left">
+											<div class="col-sm-12 col-md-12 col-xs-12 footer-static-title">
+												<div class="col-sm-4 col-md-4" style="padding-right: 10px;">
+													<div class="col-sm-12 col-md-12 col-xs-12 icon-footer" style="margin-bottom: 10px;">
+														<img alt="logo" src="image/logo.jpg" style="width: 75px; margin-left: 8px;">
+
+
+													</div>
+													<div class="col-sm-12 col-md-12 col-xs-12 address-footer" style="font-size: 13px; float: left;">Số 1,
+														đường Võ
+														Văn Ngân, phường Linh Chiểu, quận Thủ Đức, Tp.Hcm</div>
+													<div class="col-sm-12 col-md-12 col-xs-12 address-footer" style="font-size: 13px; padding-top: 2px;">YeuSach.com
+														nhận đặt hàng trực tuyến và giao hàng tận nơi. KHÔNG hỗ trợ
+														đặt mua và nhận hàng trực tiếp tại văn phòng cũng như tất
+														cả Hệ Thống Yêu sách Bookstore trên toàn quốc.</div>
+												</div>
+												<div class="col-sm-4 col-md-4 col-xs-12" style="padding: 0px;">
+													<div class="col-sm-12 col-md-12 col-xs-12" align="center" style="font-size: 14.5px; margin-bottom: 20px; margin-top: 10px; padding: 0px;">
+														<a target="_blank" href="javascript:void(0)" title="Facebook"> <img alt="Facebook" src="https://www.fahasa.com/skin/frontend/ma_vanese/fahasa/images/footer/Facebook-on.png">
+														</a> <a target="_blank" href="javascript:void(0)" title="Instagram"> <img alt="Instagram" src="https://www.fahasa.com/skin/frontend/ma_vanese/fahasa/images//footer/Insta-on.png">
+														</a> <a target="_blank" href="" title="Youtube"> <img alt="Youtube" src="https://www.fahasa.com/skin/frontend/ma_vanese/fahasa/images//footer/Youtube-on.png">
+														</a> <a target="_blank" href="javascript:void(0)" title="Twitter"> <img alt="Twitter" src="https://www.fahasa.com/skin/frontend/ma_vanese/fahasa/images//footer/twitter-on.png">
+														</a>
+
+													</div>
+													<div class="col-sm-12 col-md-12 col-xs-12" style="font-size: 14.5px">
+														<div class="col-sm-6 col-md-6 col-xs-6" style="text-align: right;">
+															<a href="javascript:void(0)">
+																<img alt="Bookstore.COM" src="https://www.fahasa.com/media/wysiwyg/Logo-NCC/android.png" style="max-width: 110px;">
+															</a>
+														</div>
+														<div class="col-sm-6 col-md-6 col-xs-6">
+															<a href="javascript:void(0)"> <img alt="Bookstore.COM" src="https://www.fahasa.com/media/wysiwyg/Logo-NCC/appstore.png"
+																 style="max-width: 110px;">
+															</a>
+														</div>
+													</div>
+												</div>
+												<div class="col-sm-4 col-md-4 " style="padding: 5px;">
+													<div class="footer-static-title">
+														<h3>Liên hệ</h3>
+													</div>
+													<div class="footer-static-content">
+														<ul>
+															<li class="first"><em class="fa fa-map-marker">&nbsp;</em><span>
+																	Địa Chỉ:</span> 01 Võ Văn Ngân, Linh Trung, Thủ Đức, TP. HCM</li>
+															<li><em class="fa fa-envelope">&nbsp;</em><span>
+																	Email:</span> Yeusach@YeusachBookstore.com</li>
+															<li class="last"><em class="fa fa-phone">&nbsp;</em><span>
+																	Phone:</span> 190055555</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+		</footer>
+
+
+		<script>
+			//Goto url
+			function gotoPage(url) {
+				document.location.href = url;
+			}
+			
+
+			$(document).ready(function () {
+				var child = $(".nav.nav-left").children();
+				$(child).removeClass("active");
+				var url = location.href;
+				if (url.indexOf("Categories") != -1) {
+					if (url.indexOf("Categories?danhMuc=yeuthich") != -1) child.eq(1).addClass("active");
+					else if (url.indexOf("Categories?danhMuc=banchay") != -1) child.eq(2).addClass("active");
+				} else if (url.indexOf("Manager") == -1) child.eq(0).addClass("active");
+				if (url.indexOf("Manager") != -1) {
+					if (url.indexOf("BangTin") != -1) child.eq(1).addClass("active");
+					else if (url.indexOf("DonHang") != -1) child.eq(2).addClass("active");
+					else if (url.indexOf("KhachHang") != -1) child.eq(3).addClass("active");
+					else if (url.indexOf("KhoSach") != -1 || url.indexOf("Sach") != -1) child.eq(4).addClass("active");
+				} else child.eq(0).addClass("active");
+
+
+				$("#btn-toggle").click(function () {
+					var height = $("#btn-toggle").next().css("height");
+					if (height == '0px') {
+						$("#btn-toggle").next().animate({ "height": "156px" }, 300);
+					} else {
+						$("#btn-toggle").next().animate({ "height": "0px" }, 300);
+					}
+				});
+
+				$(document).on("mouseover", ".dropdown", function () {
+					$(".dropdown .right-dropdown-content").css({ "display": "block" });
+					$(".dropdown .right-dropdown-content").animate({ "opacity": "1.0" }, 100);
+				});
+
+
+				$(document).on("mouseleave", ".dropdown, .right-dropdown-content", function () {
+					$(".dropdown .right-dropdown-content").animate({ "opacity": "0" }, 100, function () {
+						$(".dropdown .right-dropdown-content").css({ "display": "none" });
+					});
+				});
+			});
+
+
+			function openNewTab(url) {
+				window.open(url, '_blank');
+			}
+		</script>
+</body>
+
+</html>
