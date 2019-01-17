@@ -14,6 +14,7 @@
 	position: relative;
 	height: auto;
 	overflow: hidden;
+	text-align: center;
 }
 
 .listView .listView-item:hover div.detail{
@@ -26,8 +27,11 @@
 
 .listView-item div.thumbnail {
 	display: inline-block;
-    width: 100%;
-    height: 100%;
+	width: 220px;
+    height: 220px;
+    border: 1px solid #AAA;
+    border-radius: 10px;
+    margin: 10px 0;
     overflow: hidden;
 	cursor: pointer;
 }
